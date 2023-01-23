@@ -11,7 +11,7 @@ const Layout: FC<Props> = ({ children }) => {
   return (
     <>
       <Head>
-        <title>My Todo App</title>
+        <title>Carlos Portfolio</title>
         <meta name="description" content="My first Todo app" />
       </Head>
       <div className="min-h-screen flex flex-col">

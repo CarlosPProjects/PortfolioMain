@@ -1,10 +1,34 @@
 import Button from "@/components/Button";
+import renderHeroImage from "@/components/renderThemeChanger/renderHeroImage";
+
+import {
+  TbBrandNextjs,
+  TbBrandJavascript,
+  TbBrandTailwind,
+  TbBrandVisualStudio,
+  TbBrandCss3,
+  TbBrandGithub,
+  TbBrandFramer,
+  TbBrandHtml5,
+  TbBrandPhp,
+} from "react-icons/tb";
+import { SiThreedotjs, SiBrave, SiPrisma } from "react-icons/si";
 
 const Hero = () => {
   return (
     <section>
+      <div className="flex justify-center pb-10 pt-10 dark:text-white text-black">
+        <span>
+          <TbBrandNextjs size={25} />
+        </span>
+        <TbBrandJavascript />
+        <TbBrandTailwind />
+        <TbBrandFramer />
+        {renderHeroImage()}
+      </div>
+
       <h1 className="text-7xl font-bold">
-        Hi I'm <span className="dark:text-purple-600">Carlos</span>
+        Hi I'm <span className="dark:text-[#4c4138] ">Carlos</span>
       </h1>
       <h3 className="text-4xl my-3">I am Web Designer</h3>
       <p className="text-gray-700 mb-8 dark:text-white">
