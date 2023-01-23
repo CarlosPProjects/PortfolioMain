@@ -1,6 +1,6 @@
 import Link from "next/link";
-import renderButton from "@/components/renderThemeChanger/renderButton";
-import renderLogo from "@/components/renderThemeChanger/renderLogo";
+import RenderButton from "@/components/renderThemeChanger/RenderButton";
+import RenderLogo from "@/components/renderThemeChanger/RenderLogo";
 
 const Header = () => {
   const navigations = [
@@ -11,19 +11,19 @@ const Header = () => {
 
   return (
     <header className="h-16 flex items-center justify-between">
-      {renderLogo()}
+      {RenderLogo()}
       <ul className="flex gap-4 justify-center">
         {navigations.map((nav) => (
           <Link
             key={nav.label}
             href={nav.path}
-            className="font-semibold text-gray-50 hover:text-gray-500"
+            className="font-semibold text-gray-50 hover:text-gray-500 dark:text-black"
           >
             {nav.label}
           </Link>
         ))}
       </ul>
-      {renderButton()}
+      {RenderButton()}
     </header>
   );
 };

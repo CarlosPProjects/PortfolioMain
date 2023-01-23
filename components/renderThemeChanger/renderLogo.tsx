@@ -2,7 +2,7 @@ import { useTheme } from "next-themes";
 import { useState, useEffect } from "react";
 import Image from "next/image";
 
-const renderLogo = () => {
+const RenderLogo = () => {
   const { systemTheme, theme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
@@ -29,4 +29,4 @@ const renderLogo = () => {
   }
 };
 
-export default renderLogo;
+export default RenderLogo;

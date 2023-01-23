@@ -2,7 +2,7 @@ import { useTheme } from "next-themes";
 import { useState, useEffect } from "react";
 import Button from "@/components/Button";
 
-const renderButton = () => {
+const RenderButton = () => {
   const { systemTheme, theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
@@ -53,4 +53,4 @@ const renderButton = () => {
   }
 };
 
-export default renderButton;
+export default RenderButton;

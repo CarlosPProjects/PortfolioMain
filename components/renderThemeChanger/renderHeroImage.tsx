@@ -2,7 +2,7 @@ import { useTheme } from "next-themes";
 import { useState, useEffect } from "react";
 import Image from "next/image";
 
-const renderHeroImage = () => {
+const RenderHeroImage = () => {
   const { systemTheme, theme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
@@ -27,4 +27,4 @@ const renderHeroImage = () => {
   }
 };
 
-export default renderHeroImage;
+export default RenderHeroImage;

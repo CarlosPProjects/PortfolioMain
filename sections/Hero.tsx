@@ -1,5 +1,5 @@
 import Button from "@/components/Button";
-import renderHeroImage from "@/components/renderThemeChanger/renderHeroImage";
+import RenderHeroImage from "@/components/renderThemeChanger/RenderHeroImage";
 
 import {
   TbBrandNextjs,
@@ -24,7 +24,7 @@ const Hero = () => {
         <TbBrandJavascript />
         <TbBrandTailwind />
         <TbBrandFramer />
-        {renderHeroImage()}
+        {RenderHeroImage()}
       </div>
 
       <h1 className="text-7xl font-bold">
