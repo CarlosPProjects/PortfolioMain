@@ -1,6 +1,6 @@
 import Link from "next/link";
-import RenderButton from "../components/renderThemeChanger/RenderButton";
-import RenderLogo from "../components/renderThemeChanger/RenderLogo";
+import RenderButton from "@/components/RenderButton";
+import RenderLogo from "@/components/RenderLogo";
 
 const Header = () => {
   const navigations = [

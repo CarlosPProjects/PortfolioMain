@@ -1,5 +1,5 @@
 import Button from "@/components/Button";
-import RenderHeroImage from "../components/renderThemeChanger/RenderHeroImage";
+import RenderHeroImage from "@/components/RenderHeroImage";
 
 import {
   TbBrandNextjs,
