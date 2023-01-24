@@ -1,5 +1,6 @@
 import Button from "@/components/Button";
 import RenderHeroImage from "@/components/RenderHeroImage";
+import { motion } from "framer-motion";
 
 import {
   TbBrandNextjs,
@@ -18,12 +19,82 @@ const Hero = () => {
   return (
     <section>
       <div className="flex justify-center pb-10 pt-10 dark:text-white text-black">
-        <span>
-          <TbBrandNextjs size={25} />
-        </span>
-        <TbBrandJavascript />
-        <TbBrandTailwind />
-        <TbBrandFramer />
+        <div className="absolute w-36 justify-center items-center flex">
+          <motion.span
+            className="absolute left-0"
+            animate={{
+              type: "spring",
+              translateY: [0, 10, 0],
+            }}
+            transition={{
+              duration: 3,
+              ease: "easeInOut",
+              repeat: Infinity,
+            }}
+          >
+            <TbBrandNextjs size={25} />
+          </motion.span>
+          <motion.span
+            className="absolute right-0"
+            animate={{
+              type: "spring",
+              translateY: [0, 10, 0],
+            }}
+            transition={{
+              duration: 3,
+              ease: "easeInOut",
+              repeat: Infinity,
+              
+            }}
+          >
+            <TbBrandJavascript size={25} />
+          </motion.span>
+          <motion.span
+            className="absolute -top-10"
+            animate={{
+              type: "spring",
+              translateY: [0, 10, 0],
+            }}
+            transition={{
+              duration: 3,
+              ease: "easeInOut",
+              repeat: Infinity,
+             
+            }}
+          >
+            <TbBrandTailwind size={25} />
+          </motion.span>
+          <motion.span
+            className="absolute -top-8 right-6"
+            animate={{
+              type: "spring",
+              translateY: [0, 10, 0],
+            }}
+            transition={{
+              duration: 3,
+              ease: "easeInOut",
+              repeat: Infinity,
+             
+            }}
+          >
+            <TbBrandFramer size={25} />
+          </motion.span>
+          <motion.span
+            className="absolute -top-8 left-6"
+            animate={{
+              type: "spring",
+              translateY: [0, 10, 0],
+            }}
+            transition={{
+              duration: 3,
+              ease: "easeInOut",
+              repeat: Infinity,
+
+            }}
+          >
+            <TbBrandGithub size={25} />
+          </motion.span>
+        </div>
         {RenderHeroImage()}
       </div>
 
