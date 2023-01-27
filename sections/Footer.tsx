@@ -16,7 +16,7 @@ const Footer = () => {
         <SlSocialLinkedin size={18} className="cursor-pointer" />
         <SlSocialGithub size={18} className="cursor-pointer" />
         <SlSocialInstagram size={18} className="cursor-pointer" />
-        <div className="w-12 border-black dark:border-gray-100 border-b-2"></div>
+        <div className="w-12 border-black dark:border-gray-100 border-b-2 max-sm:hidden"></div>
       </div>
     </footer>
   );

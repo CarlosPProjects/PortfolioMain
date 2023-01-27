@@ -4,6 +4,9 @@
 
 @layer base {
   body {
-    @apply max-w-6xl h-screen mx-auto bg-gray-300 text-gray-900 dark:bg-[#1d1d20] dark:text-gray-50;
+    @apply max-w-6xl mx-auto bg-gray-300 text-gray-900 dark:bg-[#1d1d20] dark:text-gray-50;
+  }
+  * {
+    @apply box-border p-0 m-0;
   }
 }

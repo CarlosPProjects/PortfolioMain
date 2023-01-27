@@ -16,19 +16,26 @@ const Layout: FC<Props> = ({ children }) => {
         <meta name="description" content="My first Todo app" />
       </Head>
 
-      <div className="h-screen py-16">
-        <div className="h-full flex flex-col p-8 bg-gray-50 dark:bg-[#1d1d20] rounded-xl shadow-black shadow-2xl">
+      <div className="w-full h-screen max-lg:p-8 max-sm:p-0 p-16">
+        <div className="bg-gray-50 dark:bg-[#1d1d20] w-full h-full p-8 flex flex-col rounded-xl max-sm:rounded-none shadow-black shadow-lg">
           <Header />
-          <motion.main
-            animate={{ opacity: [0, 1] }}
-            transition={{ duration: 0.8, ease: "easeIn" }}
-            className="flex flex-col flex-grow px-16 justify-center items-center"
-          >
+          <div className="flex-grow flex items-center justify-center">
             {children}
-          </motion.main>
+          </div>
           <Footer />
         </div>
       </div>
+      {/* <div className="w-full h-full flex bg-gray-50 dark:bg-[#1d1d20] rounded-xl max-w-6xl p-8">
+        <Header />
+        <motion.main
+          animate={{ opacity: [0, 1] }}
+          transition={{ duration: 0.8, ease: "easeIn" }}
+          className="px-16 max-sm:p-0"
+        >
+          {children}
+        </motion.main>
+        <Footer />
+      </div> */}
     </>
   );
 };
