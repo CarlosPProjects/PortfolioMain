@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply max-w-6xl mx-auto bg-gray-300 text-gray-900 dark:bg-[#1d1d20] dark:text-gray-50;
+    @apply max-w-6xl mx-auto bg-gray-300 max-sm:bg-gray-50 text-gray-900 dark:bg-[#1d1d20] dark:text-gray-300;
   }
   * {
     @apply box-border p-0 m-0;

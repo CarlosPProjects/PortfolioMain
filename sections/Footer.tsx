@@ -1,23 +1,18 @@
-import {
-  SlSocialLinkedin,
-  SlSocialInstagram,
-  SlSocialGithub,
-} from "react-icons/sl";
+import { SlEnvolope } from "react-icons/sl";
+import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className="flex justify-between items-center dark:text-gray-50 text-sm">
+    <footer className="flex justify-between items-center dark:text-gray-50 text-sm max-sm:pb-8">
       <div>
         &copy;
         {new Date().getFullYear()}
         <span className="ml-1">All Rights Reserved</span>
       </div>
-      <div className="flex items-center gap-2">
-        <SlSocialLinkedin size={18} className="cursor-pointer" />
-        <SlSocialGithub size={18} className="cursor-pointer" />
-        <SlSocialInstagram size={18} className="cursor-pointer" />
-        <div className="w-12 border-black dark:border-gray-100 border-b-2 max-sm:hidden"></div>
-      </div>
+
+      <Link href={"mailto:cg.fullstackdev@gmail.com?subject=Asunto&body=Mensaje"}>
+        <SlEnvolope size={20} className="cursor-pointer" />
+      </Link>
     </footer>
   );
 };

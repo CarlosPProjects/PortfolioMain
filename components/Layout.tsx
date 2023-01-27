@@ -17,25 +17,14 @@ const Layout: FC<Props> = ({ children }) => {
       </Head>
 
       <div className="w-full h-screen max-lg:p-8 max-sm:p-0 p-16">
-        <div className="bg-gray-50 dark:bg-[#1d1d20] w-full h-full p-8 flex flex-col rounded-xl max-sm:rounded-none shadow-black shadow-lg">
+        <div className="bg-gray-50 dark:bg-[#1d1d20] w-full h-full p-8 flex flex-col rounded-xl max-sm:rounded-none max-sm:shadow-none shadow-black shadow-lg">
           <Header />
-          <div className="flex-grow flex items-center justify-center">
+          <div className="flex-grow flex items-center justify-center max-sm:pt-8">
             {children}
           </div>
           <Footer />
         </div>
       </div>
-      {/* <div className="w-full h-full flex bg-gray-50 dark:bg-[#1d1d20] rounded-xl max-w-6xl p-8">
-        <Header />
-        <motion.main
-          animate={{ opacity: [0, 1] }}
-          transition={{ duration: 0.8, ease: "easeIn" }}
-          className="px-16 max-sm:p-0"
-        >
-          {children}
-        </motion.main>
-        <Footer />
-      </div> */}
     </>
   );
 };

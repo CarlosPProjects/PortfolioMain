@@ -1,24 +1,26 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
-import Image from "next/image";
+import { SlMagnifier } from "react-icons/sl";
+import Link from "next/link";
+import { BsArrowReturnLeft } from "react-icons/bs";
 
 const projects = [
   {
     key: "01",
     name: "Diverfy",
-    info: ["Wordpress", "CSS", "HTML5", "PHP"],
-    route: "#",
+    info: "This eCommerce platform, built with WordPress, allows brands to sell their products at exclusive prices promoted by influencers. Users have a smooth and secure experience with various payment and shipping options. The platform, built with only WordPress, has been successful in increasing sales and generating traffic.",
+    route: "https://diverfy.com/",
   },
   {
     key: "02",
-    name: "CheckTask",
-    info: ["Wordpress", "CSS", "HTML5", "PHP"],
-    route: "#",
+    name: "SoyunGourmet",
+    info: "This project is a basket selling platform, built with WordPress. We offer a wide variety of customized baskets, filled with fresh and high-quality products. The website is designed with an user-friendly interface and a secure checkout process. WordPress was used to develop and manage the site, allowing for efficient updates and new product additions.",
+    route: "https://soyungourmet.com/",
   },
   {
     key: "03",
-    name: "SoyunGourmet",
-    info: ["Wordpress", "CSS", "HTML5", "PHP"],
+    name: "Todo-App",
+    info: "In development, Todo-App is a mobile app designed to improve productivity and stay organized. Users can create task lists, shopping lists, set reminders and track progress in real-time. Easy to use and highly customizable, it allows users to sync with their calendar and set reminders based on location.",
     route: "#",
   },
 ];
@@ -41,36 +43,59 @@ const Hero = () => {
   };
 
   return (
-    // <section className="flex flex-row max-md:flex-col gap-20">
-    <section className="grid grid-cols-3 max-lg:grid-cols-1 max-lg:grid-rows-2 gap-20 max-sm:gap-10">
+    <section className="grid grid-cols-3 max-lg:grid-cols-1 max-lg:grid-rows-2 gap-20">
       <div className="col-span-2 max-lg:col-span-1">
         {staticTextVisible && (
-          <div className="h-80 max-w-md">
+          <motion.div
+            animate={{ opacity: [0, 1] }}
+            transition={{ duration: 0.8, ease: "easeIn" }}
+            className="h-80 max-w-lg"
+          >
             <h1 className="text-8xl font-bold mb-8 max-sm:text-6xl">Welcome</h1>
             <div className="pl-8 border-l-2 border-black dark:border-gray-50">
               <p>
-                My name is Ian Carlos, I'm a front-end developer based in
-                Torquay, Devon, UK. I have developed many types of front-ends
-                from well know DJ applications to Ecommerce booking platforms.
+                I'm a full stack junior developer based in Valencia, Spain. I
+                specialize in creating minimalistic and intuitive UI/UX designs
+                for e-commerce websites and blogs.
               </p>
               <br />
               <p>
-                I'm passionate about cutting-edge, pixel-perfect, beautiful
-                interfaces and intuitively implemented UX.
+                My experience in Next.js, TypeScript, Tailwind CSS and UI/UX
+                design allows me to deliver high quality and easy to use digital
+                products.
               </p>
             </div>
-          </div>
+          </motion.div>
         )}
         {elementsVisible && (
-          <div className="h-80 max-w-md grid place-content-center">
-            <Image src={"/assets/project.png"} alt="" width={570} height={0}></Image>
-          </div>
+          <motion.div
+            key={currentElement?.key}
+            animate={{ translateX: [-100, 0], opacity: [0, 1] }}
+            transition={{ duration: 0.3, ease: "easeIn" }}
+            className="h-80 max-w-lg"
+          >
+            <div className="flex row gap-2">
+              <h1 className="text-4xl font-bold mb-8">
+                {currentElement?.name}{" "}
+              </h1>
+
+              <Link
+                href={`${currentElement?.route}`}
+                target="_blank"
+                className="h-fit"
+              >
+                <SlMagnifier />
+              </Link>
+            </div>
+            <div className="pl-8 border-l-2 border-black dark:border-gray-50">
+              <p>{currentElement?.info}</p>
+            </div>
+          </motion.div>
         )}
       </div>
-      <div className="max-lg:col-span-1 relative">
-        <h2 className="text-4xl mb-8">Projects</h2>
-        <span onClick={handleHomeClick}>home</span>
-        <div className="w-24 h-24 p-8 border-black dark:border-gray-50 border-l-2 border-t-2 rounded-tl-lg">
+      <div className="max-lg:col-span-1">
+        <h2 className="text-3xl mb-8">Projects</h2>
+        <div className="w-20 h-20 p-8 border-black dark:border-gray-300 border-l-2 border-t-2 rounded-tl-lg relative">
           <div className="absolute grid gap-2">
             {projects.map((project) => (
               <motion.div
@@ -80,12 +105,17 @@ const Hero = () => {
               >
                 <h1
                   onClick={() => handleClick(project.key)}
-                  className="border-black dark:border-white border-b w-fit shadow-xl"
+                  className="border-black dark:border-gray-300 border-b w-fit shadow-xl"
                 >
                   {project.name}
                 </h1>
               </motion.div>
             ))}
+            <BsArrowReturnLeft
+              size={18}
+              onClick={handleHomeClick}
+              className="cursor-pointer"
+            />
           </div>
         </div>
       </div>
