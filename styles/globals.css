@@ -4,6 +4,6 @@
 
 @layer base {
   body {
-    @apply max-w-2xl mx-auto px-4;
+    @apply max-w-6xl h-screen mx-auto bg-gray-300 text-gray-900 dark:bg-[#1d1d20] dark:text-gray-50;
   }
 }

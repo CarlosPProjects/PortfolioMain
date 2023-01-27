@@ -1,120 +1,62 @@
-import Button from "@/components/Button";
-import RenderHeroImage from "@/components/RenderHeroImage";
 import { motion } from "framer-motion";
 
-import {
-  TbBrandNextjs,
-  TbBrandJavascript,
-  TbBrandTailwind,
-  TbBrandVisualStudio,
-  TbBrandCss3,
-  TbBrandGithub,
-  TbBrandFramer,
-  TbBrandHtml5,
-  TbBrandPhp,
-} from "react-icons/tb";
-import { SiThreedotjs, SiBrave, SiPrisma } from "react-icons/si";
-
 const Hero = () => {
+  const projects = [
+    {
+      key: "01",
+      name: "Diverfy",
+      info: ["Wordpress", "CSS", "HTML5", "PHP"],
+      route: "#",
+    },
+    {
+      key: "02",
+      name: "CheckTask",
+      info: ["Wordpress", "CSS", "HTML5", "PHP"],
+      route: "#",
+    },
+    {
+      key: "02",
+      name: "SoyunGourmet",
+      info: ["Wordpress", "CSS", "HTML5", "PHP"],
+      route: "#",
+    },
+  ];
+
   return (
-    <section>
-      <div className="flex justify-center pb-10 pt-10 dark:text-white text-black">
-        <div className="absolute w-36 justify-center items-center flex">
-          <motion.span
-            className="absolute left-0"
-            animate={{
-              type: "spring",
-              translateY: [0, 10, 0],
-            }}
-            transition={{
-              duration: 3,
-              ease: "easeInOut",
-              repeat: Infinity,
-            }}
-          >
-            <TbBrandNextjs size={25} />
-          </motion.span>
-          <motion.span
-            className="absolute right-0"
-            animate={{
-              type: "spring",
-              translateY: [0, 10, 0],
-            }}
-            transition={{
-              duration: 3,
-              ease: "easeInOut",
-              repeat: Infinity,
-              
-            }}
-          >
-            <TbBrandJavascript size={25} />
-          </motion.span>
-          <motion.span
-            className="absolute -top-10"
-            animate={{
-              type: "spring",
-              translateY: [0, 10, 0],
-            }}
-            transition={{
-              duration: 3,
-              ease: "easeInOut",
-              repeat: Infinity,
-             
-            }}
-          >
-            <TbBrandTailwind size={25} />
-          </motion.span>
-          <motion.span
-            className="absolute -top-8 right-6"
-            animate={{
-              type: "spring",
-              translateY: [0, 10, 0],
-            }}
-            transition={{
-              duration: 3,
-              ease: "easeInOut",
-              repeat: Infinity,
-             
-            }}
-          >
-            <TbBrandFramer size={25} />
-          </motion.span>
-          <motion.span
-            className="absolute -top-8 left-6"
-            animate={{
-              type: "spring",
-              translateY: [0, 10, 0],
-            }}
-            transition={{
-              duration: 3,
-              ease: "easeInOut",
-              repeat: Infinity,
-
-            }}
-          >
-            <TbBrandGithub size={25} />
-          </motion.span>
+    <section className="grid grid-cols-10 gap-20">
+      <div className="col-span-6">
+        <h1 className="text-8xl font-bold mb-8">Welcome</h1>
+        <div className="pl-8 border-l-2 border-black dark:border-gray-50">
+          <p>
+            My name is Ian Dunkerley, I'm a front-end developer based in
+            Torquay, Devon, UK. I have developed many types of front-ends from
+            well know DJ applications to Ecommerce booking platforms.
+          </p>
+          <br />
+          <p>
+            I'm passionate about cutting-edge, pixel-perfect, beautiful
+            interfaces and intuitively implemented UX.
+          </p>
         </div>
-        {RenderHeroImage()}
       </div>
-
-      <h1 className="text-7xl font-bold">
-        Hi I'm <span className="dark:text-[#4c4138] ">Carlos</span>
-      </h1>
-      <h3 className="text-4xl my-3">I am Web Designer</h3>
-      <p className="text-gray-700 mb-8 dark:text-white">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid et
-        iusto a tenetur quaerat nobis nesciunt ex laborum, sequi quae quis
-        facilis, assumenda saepe quibusdam vero animi fugiat, aliquam facere.
-      </p>
-      <Button
-        className="bg-purple-600 text-white px-6"
-        onClick={() => {
-          console.log("Waitig for a function");
-        }}
-      >
-        Hire Me!
-      </Button>
+      <div className="col-span-4 relative">
+        <h2 className="text-4xl mb-8">Projects</h2>
+        <div className="w-24 h-24 p-8 border-black dark:border-gray-50 border-l-2 border-t-2 rounded-tl-lg">
+          <div className="absolute grid gap-2">
+            {projects.map((project) => (
+              <motion.div
+                key={project.key}
+                whileHover={{ translateX: 5, transition: { duration: 0.3 } }}
+                className="cursor-pointer"
+              >
+                <h1 className="border-black dark:border-white border-b w-fit shadow-xl">
+                  {project.name}
+                </h1>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </div>
     </section>
   );
 };
