@@ -2,7 +2,6 @@ import React, { FC, ReactNode } from "react";
 import Head from "next/head";
 import Header from "@/sections/Header";
 import Footer from "@/sections/Footer";
-import { motion } from "framer-motion";
 
 interface Props {
   children: ReactNode;
@@ -12,8 +11,9 @@ const Layout: FC<Props> = ({ children }) => {
   return (
     <>
       <Head>
-        <title>Carlos Portfolio</title>
-        <meta name="description" content="My first Todo app" />
+        <title>Carlos Garavito</title>
+        <meta name="description" content="My first portfolio prototype" />
+        <link rel="icon" href="favicon.svg" type="image/svg+xml" />
       </Head>
 
       <div className="w-full h-screen max-lg:p-8 max-sm:p-0 p-16">
