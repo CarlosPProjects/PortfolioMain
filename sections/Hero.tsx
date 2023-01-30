@@ -113,7 +113,7 @@ const Hero = () => {
               >
                 <h1
                   onClick={() => handleClick(project.key)}
-                  className="border-black dark:border-gray-300 border-b w-fit shadow-xl"
+                  className="border-black dark:border-gray-300 border-b w-fit"
                 >
                   {project.name}
                 </h1>
