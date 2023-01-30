@@ -8,7 +8,7 @@ const projects = [
   {
     key: "01",
     name: "Noviembre La Iruela",
-    info: "This website project for a client's rural house in the Sierra de Jaén offers peace and connection with nature. It was built using Wordpress and the visual page builder Divi to achieve an attractive and user-friendly design for travelers.",
+    info: "This project is a website for a client that offers its rural house as a quiet retreat close to nature. It was developed with Wordpress and the visual builder Divi, providing an attractive and easy to use experience for travelers.",
     route: "http://noviembrelairuela.es/",
   },
   {
