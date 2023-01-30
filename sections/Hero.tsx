@@ -8,7 +8,7 @@ const projects = [
   {
     key: "01",
     name: "Noviembre La Iruela",
-    info: "una página web desarrollada con WordPress, CSS, HTML y PHP que muestra el encanto de un alojamiento rural ubicado en la impresionante Sierra de Cazorla.",
+    info: "This website project for a client's rural house in the Sierra de Jaén offers peace and connection with nature. It was built using Wordpress and the visual page builder Divi to achieve an attractive and user-friendly design for travelers.",
     route: "http://noviembrelairuela.es/",
   },
   {
