@@ -7,22 +7,30 @@ import { BsArrowReturnLeft } from "react-icons/bs";
 const projects = [
   {
     key: "01",
+    name: "Noviembre La Iruela",
+    info: "una página web desarrollada con WordPress, CSS, HTML y PHP que muestra el encanto de un alojamiento rural ubicado en la impresionante Sierra de Cazorla.",
+    route: "http://noviembrelairuela.es/",
+  },
+  {
+    
+    key: "02",
     name: "Diverfy",
     info: "This eCommerce platform, built with WordPress, allows brands to sell their products at exclusive prices promoted by influencers. Users have a smooth and secure experience with various payment and shipping options. The platform, built with only WordPress, has been successful in increasing sales and generating traffic.",
     route: "https://diverfy.com/",
   },
   {
-    key: "02",
+    key: "03",
     name: "SoyunGourmet",
     info: "This project is a basket selling platform, built with WordPress. We offer a wide variety of customized baskets, filled with fresh and high-quality products. The website is designed with an user-friendly interface and a secure checkout process. WordPress was used to develop and manage the site, allowing for efficient updates and new product additions.",
     route: "https://soyungourmet.com/",
   },
   {
-    key: "03",
+    key: "04",
     name: "Todo-App",
     info: "In development, Todo-App is a mobile app designed to improve productivity and stay organized. Users can create task lists, shopping lists, set reminders and track progress in real-time. Easy to use and highly customizable, it allows users to sync with their calendar and set reminders based on location.",
     route: "#",
   },
+  
 ];
 
 const Hero = () => {
