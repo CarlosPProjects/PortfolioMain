@@ -12,7 +12,6 @@ const projects = [
     route: "http://noviembrelairuela.es/",
   },
   {
-    
     key: "02",
     name: "Diverfy",
     info: "This eCommerce platform, built with WordPress, allows brands to sell their products at exclusive prices promoted by influencers. Users have a smooth and secure experience with various payment and shipping options. The platform, built with only WordPress, has been successful in increasing sales and generating traffic.",
@@ -30,7 +29,6 @@ const projects = [
     info: "In development, Todo-App is a mobile app designed to improve productivity and stay organized. Users can create task lists, shopping lists, set reminders and track progress in real-time. Easy to use and highly customizable, it allows users to sync with their calendar and set reminders based on location.",
     route: "#",
   },
-  
 ];
 
 const Hero = () => {
@@ -86,17 +84,14 @@ const Hero = () => {
               <h1 className="text-4xl font-bold mb-8">
                 {currentElement?.name}{" "}
               </h1>
-
-              <Link
-                href={`${currentElement?.route}`}
-                target="_blank"
-                className="h-fit"
-              >
-                <SlMagnifier />
-              </Link>
             </div>
             <div className="pl-8 border-l-2 border-black dark:border-gray-50">
               <p>{currentElement?.info}</p>
+              <div className=" w-fit h-fit pb-1 mt-2 border-gray-900 border-b font-bold">
+                <Link href={`${currentElement?.route}`} target="_blank">
+                  View site
+                </Link>
+              </div>
             </div>
           </motion.div>
         )}
